@@ -7,7 +7,7 @@ Aplicação web de controle de despesas pessoais. #Desafio XP Educação - React
 Este projeto é composto por duas partes:
 
 - **Frontend (este repositório)**: Interface de usuário construída com React.
-- **Backend**: API responsável pela persistência dos dados, disponível em: [personal-expenses-backend](https://github.com/SEU_USUARIO/personal-expenses-backend)
+- **Backend**: API responsável pela persistência dos dados, disponível em: [personal-expenses-backend](https://github.com/allysrdev/react-xp-avancado/tree/main/personal-expenses-backend)
 
 > ⚠️ O backend é obrigatório para o funcionamento completo da aplicação.
 
