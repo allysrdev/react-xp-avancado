@@ -34,12 +34,3 @@ Este projeto é composto por duas partes:
 - Visual com Material UI
 
 ---
-
-## 🛠️ Instalação
-
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/SEU_USUARIO/personal-expenses.git
-cd personal-expenses
-```
