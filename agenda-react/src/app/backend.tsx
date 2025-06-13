@@ -25,22 +25,19 @@ function handleResponse(response: Response) {
 }
 
 export function getCalendarsEndpoint(): Promise<ICalendar[]> {
-  return fetch('https://agenda-react-backend-producao.onrender.com/calendars', {
+  return fetch('http://localhost:8080/calendars', {
     credentials: 'include',
   }).then((resp) => handleResponse(resp));
 }
 
 export function getEventsEndpoint(from: string, to: string): Promise<IEvent[]> {
-  return fetch(
-    `https://agenda-react-backend-producao.onrender.com/events?date_gte=${from}&date_lte=${to}&_sort=date,time`,
-    {
-      credentials: 'include',
-    },
-  ).then((resp) => handleResponse(resp));
+  return fetch(`http://localhost:8080/events?date_gte=${from}&date_lte=${to}&_sort=date,time`, {
+    credentials: 'include',
+  }).then((resp) => handleResponse(resp));
 }
 
 export function createEventsEndpoint(event: IEvent): Promise<IEvent[]> {
-  return fetch(`https://agenda-react-backend-producao.onrender.com/events`, {
+  return fetch(`http://localhost:8080/events`, {
     credentials: 'include',
     method: 'POST',
     headers: {
@@ -50,7 +47,7 @@ export function createEventsEndpoint(event: IEvent): Promise<IEvent[]> {
   }).then((resp) => handleResponse(resp));
 }
 export function updateEventsEndpoint(event: IEvent): Promise<IEvent[]> {
-  return fetch(`https://agenda-react-backend-producao.onrender.com/events/${event.id}`, {
+  return fetch(`http://localhost:8080/events/${event.id}`, {
     credentials: 'include',
     method: 'PUT',
     headers: {
@@ -61,20 +58,20 @@ export function updateEventsEndpoint(event: IEvent): Promise<IEvent[]> {
 }
 
 export function deleteEventsEndpoint(eventId: number): Promise<void> {
-  return fetch(`https://agenda-react-backend-producao.onrender.com/events/${eventId}`, {
+  return fetch(`http://localhost:8080/events/${eventId}`, {
     credentials: 'include',
     method: 'DELETE',
   }).then((resp) => handleResponse(resp));
 }
 
 export function getUserEndpoint(): Promise<IUser> {
-  return fetch(`https://agenda-react-backend-producao.onrender.com/auth/user`, {
+  return fetch(`http://localhost:8080/auth/user`, {
     credentials: 'include',
   }).then((resp) => handleResponse(resp));
 }
 
 export function signInEndpoint(email: string, password: string): Promise<IUser> {
-  return fetch(`https://agenda-react-backend-producao.onrender.com/auth/login`, {
+  return fetch(`http://localhost:8080/auth/login`, {
     credentials: 'include',
     method: 'POST',
     headers: {
@@ -85,7 +82,7 @@ export function signInEndpoint(email: string, password: string): Promise<IUser> 
 }
 
 export function signOutEndpoint(): Promise<void> {
-  return fetch(`https://agenda-react-backend-producao.onrender.com/auth/logout`, {
+  return fetch(`http://localhost:8080/auth/logout`, {
     credentials: 'include',
     method: 'POST',
   }).then((resp) => handleResponse(resp));

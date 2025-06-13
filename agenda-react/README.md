@@ -1,54 +1,24 @@
-# React + TypeScript + Vite
+# 📅 Agenda React com TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de **agenda de compromissos** desenvolvido com **React + TypeScript + Vite**, como parte do aprofundamento dos meus estudos em **React avançado** pela XP Educação. Já atuo como desenvolvedor, e este projeto foi uma oportunidade de consolidar práticas modernas e também explorar códigos legados com Class Components.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias e Ferramentas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Material UI](https://mui.com/)
+- [React Router](https://reactrouter.com/)
+- [Context API + useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
+- Hooks customizados (`useRef`, `useSession`, etc.)
+- Class Components (como exercício de leitura de código legado)
 
-## Expanding the ESLint configuration
+## 🔐 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- ✨ Criação e visualização de eventos por data
+- 🔐 Autenticação básica com controle de sessão - O app aceita login com as credenciais de email: allyson@email.com e senha: 1234
+- 🧠 Gerenciamento de estado com Context API e `useReducer`
+- 🧩 Uso de interfaces e tipagens avançadas com TypeScript
+- 🎨 Interface responsiva com Material UI
+- ⚙️ Manipulação direta do DOM via `useRef`
+- 🏛️ Componente principal (`App`) reescrito com `ClassComponent` para estudo de códigos antigos em React
